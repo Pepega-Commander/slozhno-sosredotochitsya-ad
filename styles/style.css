@@ -142,6 +142,10 @@
   display: grid;
 }
 
+.main__topic-question {
+  margin-block-start: 5px;
+}
+
 .main__topic-question-accent {
   background-color: var(--accent-color);
   color: var(--title-text-color);
