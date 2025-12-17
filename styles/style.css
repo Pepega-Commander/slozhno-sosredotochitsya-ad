@@ -30,10 +30,10 @@
 
 .header {
   padding: 10px;
-  height: 100vh;
+  height: 668px;
   background: fixed var(--background-image);
   background-position: bottom;
-  background-size: contain;
+  background-size: cover;
 }
 
 .header__darkthemed_decoration {
@@ -130,7 +130,7 @@
 
 .main__topic-list-section {
   padding-block-start: 19px;
-  gap: 20px;
+  gap: 19px;
   display: grid;
 }
 
@@ -182,10 +182,13 @@
 }
 
 .main__topic-image-list {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
+}
+
+.main__topic-image, .main__topic-image-first {
+  width: 100%;
 }
 
 /* ПОДВАЛ */
@@ -270,6 +273,7 @@
   .main__topics {
     padding-inline: 20px;
     margin-block-start: 20px;
+    padding-block-end: 0;
   }
 
   .main__topics-list {
@@ -287,6 +291,7 @@
   .main__topic-list-section {
     margin-block-start: 20px;
     padding-block-start: 0;
+    gap: 21px;
   }
 
   .main__topic-content-out .main__topic-list-section {
@@ -327,36 +332,48 @@
     object-position: center;
   }
 
-  .main__topic-image-first:nth-child(1) {
+  .main__topic-image-section:nth-child(1) {
     grid-column: 1 / 3;
-    padding-block-end: 20px;
+    margin-block-end: 20px;
+    width: 479px;
+    height: 192px;
   }
   
-  .main__topic-image:nth-child(2) {
+  .main__topic-image-section:nth-child(2) {
     grid-column: 3 / 4;
     grid-row: 1 / 4;
-    padding-inline-start: 20px;
+    margin-inline-start: 13px;
+    width: 229px;
+    height: 442px;
   }
 
-  .main__topic-image:nth-child(3) {
+  .main__topic-image-section:nth-child(3) {
     grid-column: 1 / 1;
     grid-row: 3 / 5;
-    padding-inline-end: 20px;
+    width: 229px;
+    height: 568px;
   }
 
-  .main__topic-image:nth-child(4) {
+  .main__topic-image-section:nth-child(4) {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
+    width: 230px;
+    height: 230px;
+    margin-inline-start: 10px;
   }
 
-  .main__topic-image:nth-child(5) {
+  .main__topic-image-section:nth-child(5) {
     grid-column: 2 / 4;
     grid-row: 4 / 5;
-    padding-block-start: 20px;
+    margin-block-start: 20px;
+    margin-inline-start: 10px;
+    width: 479px;
+    height: 318px;
   }
 
   .footer__focus-screen {
-      margin-inline: 20px;
+    margin-block-start: 60px;
+    padding-inline: 20px;
   }
 
   .footer__focus-screen::before {
@@ -366,8 +383,8 @@
     block-size: 25px;
     border-inline-end: 1px solid var(--border-color);
     border-block-start: 1px solid var(--border-color);
-    margin-block-start: -420px;
-    margin-inline-start: 703px;
+    margin-block-start: -411px;
+    margin-inline-start: 692px;
   }
 
   .footer__focus-screen::after {
@@ -377,13 +394,14 @@
     block-size: 25px;
     border-inline-start: 1px solid var(--border-color);
     border-block-end: 1px solid var(--border-color);
-    margin-block-start: 386px;
+    margin-block-start: 389px;
+    margin-inline-start: -10px;
   }
 }
 
 @media (width >= 1024px) {
   .page {
-      width: 1024px;
+    width: 1024px;
   }
 
   .header {
@@ -421,6 +439,10 @@
     width: 491px;
   }
 
+  .main__topics {
+    padding-block-end: 0;
+  }
+
   .main__topic-question,  .main__topic-first-question, .main__topic-content-out .main__topic-question {
     width: 315px;
   }
@@ -438,6 +460,34 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .main__topic-image-section:nth-child(1) {
+    width: 650px;
+    height: 260px;
+    margin-block-end: 20px;
+  }
+
+  .main__topic-image-section:nth-child(2) {
+    width: 314px;
+    height: 595px;
+    margin-inline-start: 13px;
+  }
+
+  .main__topic-image-section:nth-child(3) {
+    width: 315px;
+    height: 768px;
+  }
+
+  .main__topic-image-section:nth-child(4) {
+    width: 315px;
+    height: 315px;
+    margin-inline-start: 5px;
+  }
+
+  .main__topic-image-section:nth-child(5) {
+    margin-block-start: 20px;
+    margin-inline-start: 5px;
+  }
+
   .footer__focus-screen {
     margin-inline: 20px;
     height: 768px;
@@ -445,14 +495,16 @@
 
   .footer__focus-screen::before {
     margin-block-start: -263px;
-    margin-inline-start: 959px;
+    margin-inline-start: 940px;
   }
 
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-block-start: 0;
   }
 
   .footer__focus-screen::after {
     margin-block-start: 235px;
+    margin-inline-start: -20px;
   }
 }
