@@ -111,7 +111,6 @@
 
 .header__text {
   justify-content: end;
-  margin-block-start: -4px;
   font-size: 18px;
   background-color: var(--accent-color);
   color: var(--posttitle-text-color);
@@ -139,7 +138,7 @@
 
 .main__topic-list-section {
   padding-block-start: 19px;
-  gap: 19px;
+  gap: 20px;
   display: grid;
 }
 
@@ -234,7 +233,7 @@
 .footer__focus-screen {
   align-content: center;
   margin-inline: 10px;
-  height: 100vh;
+  height: 668px;
 }
 
 .footer__title {
